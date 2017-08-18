@@ -41,7 +41,10 @@ var srcSCSS = './_source/scss/**/*.{scss,sass}',
 // Javascript Libs Pipeline
 gulp.task('jsLibs', function(done){
 
-  gulp.src('bower_components/jquery/dist/jquery.js', 'bower_components/foundation-sites/js/*.js')
+  gulp.src(
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/foundation-sites/js/*.js'
+  )
     .pipe(concat('libs.js'))
     .pipe(gulp.dest(destJS))
     .pipe(rename('libs.min.js'))
